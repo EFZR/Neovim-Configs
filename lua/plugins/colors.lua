@@ -1,26 +1,25 @@
+-- TODO: Find a way to chose colorschemes in a more dynamic way
+
 return {
 	{
 		"catppuccin/nvim",
 		-- event = "VeryLazy",
 		cmd = "LoadColors",
 		name = "catppuccin",
-		-- priority = 1000,
 		-- config = function()
 		-- 	vim.cmd.colorscheme "catppuccin"
 		-- end
 	},
 	{
 		"EdenEast/nightfox.nvim",
-		-- priority = 1000,
 		-- event = "VeryLazy",
-		cmd = "LoadColors",
+		-- cmd = "LoadColors",
 		-- config = function()
-		-- 	vim.cmd.colorscheme "nightfox"
+		--  vim.cmd.colorscheme "nightfox"
 		-- end
 	},
 	{
 		'rose-pine/neovim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
 		-- config = function()
 		-- 	vim.cmd.colorscheme "rose-pine-moon"
@@ -28,10 +27,11 @@ return {
 	},
 	{
 		'LunarVim/lunar.nvim',
-		-- event = "VeryLazy",
+		-- cmd = "LoadColors",
+		event = "VeryLazy",
 		config = function()
-			vim.cmd.colorscheme "lunar"
-			-- vim.api.nvim_create_user_command( 'LoadColors', function(opts) end, {})
+		 vim.cmd.colorscheme "lunar"
+		 -- vim.api.nvim_create_user_command( 'LoadColors', function(opts) end, {})
 		end
 	},
 	{
@@ -42,7 +42,7 @@ return {
 	{
 		"navarasu/onedark.nvim",
 		-- event = "VeryLazy",
-		cmd = "LoadColors",
+		cmd = "LoadColors"
 	},
 	{
 		"rebelot/kanagawa.nvim",

@@ -3,7 +3,15 @@ return {
 		'karb94/neoscroll.nvim',
 		event = "VeryLazy",
 		config = function()
-			require('neoscroll').setup({})
+			neoscroll = require('neoscroll')
+			local keymap = {
+				["<C-Up>"] = function() neoscroll.ctrl_u({ duration = 250 }) end;
+				["<C-Down>"] = function() neoscroll.ctrl_d({ duration = 250 }) end;
+			}
+			local modes = { 'n', 'v', 'x' }
+			for key, func in pairs(keymap) do
+			  vim.keymap.set(modes, key, func)
+			end
 		end
 	},
 	{
@@ -40,34 +48,6 @@ return {
 		'tpope/vim-surround',
 		event = "VeryLazy"
 	},
-	-- {
-	-- 	'kosayoda/nvim-lightbulb',
-	-- 	event = "VeryLazy",
-	-- 	config = function()
-	-- 		require('nvim-lightbulb').setup({
-	-- 			autocmd = { enabled = true }
-	-- 		})
-	-- 	end
-	-- },
-	{
-		'chentoast/marks.nvim',
-		event = "VeryLazy",
-		opts = {},
-	},
-	{
-		'HiPhish/nvim-ts-rainbow2',
-		event = { "BufReadPre", "BufNewFile" },
-		enabled = false,
-		-- event = "VeryLazy",
-		config = function()
-			require('nvim-treesitter.configs').setup({
-				rainbow = {
-					enable = true,
-					extended_mode = true,
-				}
-			})
-		end
-	},
 	{
 		'HiPhish/rainbow-delimiters.nvim',
 		enabled = false,
@@ -86,11 +66,4 @@ return {
 			})
 		end
 	},
-	{
-		"petertriho/nvim-scrollbar",
-		event = "VeryLazy",
-		config = function()
-			require('scrollbar').setup({})
-		end
-	}
 }

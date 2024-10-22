@@ -3,7 +3,7 @@ return {
 	enabled = true,
 	-- event = "verylazy",
 	keys = {
-		{ '<leader>/', mode = { 'n', 'v' } }
+		{ '<leader>/', mode = { 'n', 'v' } },
 	},
 	opts = {
 		toggler = {
