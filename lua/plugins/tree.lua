@@ -1,24 +1,3 @@
--- return {
--- 	{
--- 		"nvim-neo-tree/neo-tree.nvim",
--- 		enabled = true,
--- 		-- event = "VeryLazy",
--- 		branch = "v3.x",
--- 		keys = {
--- 			{ '<leader>e', ':Neotree reveal toggle<CR>' },
--- 		},
--- 		dependencies = {
--- 			"nvim-lua/plenary.nvim",
--- 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
--- 			"MunifTanjim/nui.nvim",
--- 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
--- 		},
--- 		opt = {
--- 			window = {position = "right"},
--- 		},
--- 	},
--- }
---
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
