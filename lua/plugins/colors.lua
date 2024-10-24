@@ -3,17 +3,15 @@
 return {
 	{
 		"catppuccin/nvim",
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
-		name = "catppuccin",
+		-- name = "catppuccin",
 		-- config = function()
-		-- 	vim.cmd.colorscheme "catppuccin"
-		-- end
+		--   vim.cmd.colorscheme "catppuccin"
+		--  end
 	},
 	{
 		"EdenEast/nightfox.nvim",
-		-- event = "VeryLazy",
-		-- cmd = "LoadColors",
+		cmd = "LoadColors",
 		-- config = function()
 		--  vim.cmd.colorscheme "nightfox"
 		-- end
@@ -27,76 +25,92 @@ return {
 	},
 	{
 		'LunarVim/lunar.nvim',
-		-- cmd = "LoadColors",
-		event = "VeryLazy",
-		config = function()
-		 vim.cmd.colorscheme "lunar"
-		 -- vim.api.nvim_create_user_command( 'LoadColors', function(opts) end, {})
-		end
+		cmd = "LoadColors",
+		-- event = "VeryLazy",
+		-- config = function()
+		--   vim.cmd.colorscheme "lunar"
+		-- end
 	},
 	{
 		"lunarvim/Onedarker.nvim",
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "onedarker"
+		-- end
 	},
 	{
 		"navarasu/onedark.nvim",
-		-- event = "VeryLazy",
 		cmd = "LoadColors"
 	},
 	{
 		"rebelot/kanagawa.nvim",
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
 	},
 	{
 		'folke/tokyonight.nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
 	},
 	{
 		'Everblush/nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "everblush"
+		-- end
+
 	},
 	{
 		'sainnhe/edge',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- vim.cmd.colorscheme "edge"
+		-- end
 	},
 	{
 		'Mofiqul/vscode.nvim',
-		-- event = "VeryLazy",
-		cmd = "LoadColors",
+		-- cmd = "LoadColors",
+		config = function()
+			vim.cmd.colorscheme "vscode"
+		end
 	},
 	{
 		'JoosepAlviste/palenightfall.nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
 	},
 	{
 		'stevedylandev/flexoki-nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "flexoki"
+		-- end
+
 	},
 	{
 		'samharju/synthweave.nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "synthweave"
+		-- end
+
 	},
 	{
 		'maxmx03/fluoromachine.nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "fluoromachine"
+		-- end
 	},
 	{
 		'artanikin/vim-synthwave84',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "synthwave84"
+		-- end
 	},
 	{
 		'loctvl842/monokai-pro.nvim',
-		-- event = "VeryLazy",
 		cmd = "LoadColors",
+		-- config = function()
+		-- 	vim.cmd.colorscheme "monokai-pro"
+		-- end
 	}
 }
