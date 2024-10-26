@@ -3,7 +3,6 @@ return {
 	
 	-- event = "VeryLazy",	
 	keys = {
-
 		{ '<leader>pd', function() require("goto-preview").goto_preview_definition() end,      { desc = "Preview Definition", silent = true } },
 		{ '<leader>pt', function() require("goto-preview").goto_preview_type_definition() end, { desc = "Preview Type Definition", silent = true } },
 		{ '<leader>pi', function() require("goto-preview").goto_preview_type_definition() end, { desc = "Preview Implementation", silent = true } },
