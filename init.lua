@@ -1,8 +1,5 @@
 vim.loader.enable()
 
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -27,7 +24,6 @@ local ops = {
 require("config.options")
 
 require("lazy").setup({
-
 	spec = {
 		{ import = "plugins" },
 	},

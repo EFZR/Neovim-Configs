@@ -66,6 +66,7 @@ vim.keymap.set('n', '<leader>O', "O<Esc>^Da<Esc>j", { desc = 'Newline Above', si
 vim.keymap.set('n', '<S-Home>', 'gg')
 vim.keymap.set('n', '<S-End>', 'G')
 
+
 local function toggle_highlight()
     local line_num = vim.fn.line('.')
     local highlight_group = 'LineHighlight'

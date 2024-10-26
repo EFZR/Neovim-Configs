@@ -1,5 +1,6 @@
 return {
 	'rmagatti/goto-preview',
+	
 	-- event = "VeryLazy",	
 	keys = {
 
@@ -9,6 +10,7 @@ return {
 		{ '<leader>pr', function() require("goto-preview").goto_preview_references() end,      { desc = "Preview References", silent = true } },
 		{ '<leader>pc', function() require("goto-preview").close_all_win() end,                { desc = "Close Previews", silent = true } },
 	},
+
 	config = function()
 		require('goto-preview').setup()
 	end
