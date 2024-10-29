@@ -20,42 +20,26 @@ return {
 		config = function()
 			require('hlslens').setup()
 
+			local kopts = {noremap = true, silent = true}
+
 			vim.api.nvim_set_keymap('n', 'n',
 				[[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
-				{ desc = "Next search result", silent = true })
-
+				kopts)
 			vim.api.nvim_set_keymap('n', 'N',
 				[[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
-				{ desc = "Previous Search Result", silent = true })
+				kopts)
+			vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+			vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+			vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+			vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
 
-			vim.api.nvim_set_keymap('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]],
-				{ desc = 'Next Search Result Highlighted', silent = true })
-
-			vim.api.nvim_set_keymap('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]],
-				{ desc = "Previous Search Result Highlighted", silent = true })
-
-			vim.api.nvim_set_keymap('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]],
-				{ desc = "Mark Current Word And Search Forward", silent = true })
-
-			vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]],
-				{ desc = "Mark Current Workd and Search Backwards" })
-
-			vim.api.nvim_set_keymap('n', '<Leader>n', '<Cmd>noh<CR>', { desc = "No HLS", silent = true })
+			vim.api.nvim_set_keymap('n', '<Leader>l', '<Cmd>noh<CR>', kopts)
 		end
 
 	},
 	{
 		'tpope/vim-surround',
 		event = "VeryLazy"
-	},
-	{
-		'HiPhish/rainbow-delimiters.nvim',
-		enabled = false,
-		event = { "BufReadPre", "BufNewFile" },
-		-- config = function()
-		-- 	require('rainbow-delimiters.setup').setup {
-		-- 	}
-		-- end
 	},
 	{
 		"tzachar/local-highlight.nvim",
