@@ -1,5 +1,4 @@
-return 
-{
+return {
   "rmagatti/goto-preview",
   event = "BufEnter",
   config = function()
